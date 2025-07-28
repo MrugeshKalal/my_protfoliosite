@@ -1,0 +1,284 @@
+/* Neutral color palette for portfolio */
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray-light: #F5F5F5;
+    --gray: #D3D3D3;
+    --gray-dark: #A9A9A9;
+    --blue: #007BFF;
+    --blue-dark: #0056b3;
+    --green: #28a745;
+    --red: #dc3545;
+    --yellow: #ffc107;
+}
+/* Example usage for main elements */
+body {
+    background: var(--gray-light);
+    color: var(--black);
+}
+header, footer {
+    background: var(--black);
+    color: var(--white);
+}
+section {
+    background: var(--white);
+    color: var(--black);
+    box-shadow: 0 2px 8px var(--gray);
+}
+.project {
+    background: var(--gray);
+    color: var(--black);
+}
+nav ul li a {
+    color: var(--white);
+}
+nav ul li a:hover {
+    color: var(--gray-dark);
+}
+form input, form textarea {
+    background: var(--white);
+    border: 1px solid var(--gray-dark);
+    color: var(--black);
+}
+form button {
+    background: var(--black);
+    color: var(--white);
+}
+form button:hover {
+    background: var(--gray-dark);
+    color: var(--white);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e0e7ff 0%, #f4f4f4 100%);
+    color: var(--black);
+    line-height: 1.6;
+}
+header {
+    background: var(--black);
+    color: var(--white);
+    padding: 1rem 0;
+    text-align: center;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 1rem;
+}
+nav ul li {
+    margin: 0 1rem;
+}
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: var(--gray-dark);
+}
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+section {
+    background: var(--white);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--gray);
+}
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.project {
+    background: var(--gray);
+    color: var(--black);
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.project-list .project h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+.project-list .project-desc {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--black);
+    background: var(--gray);
+    border-radius: 6px;
+    padding: 1rem;
+    box-shadow: 0 1px 4px var(--gray-dark);
+}
+.project-list .project-btn {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: var(--black);
+    color: var(--white);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    border: none;
+}
+.project-list .project-btn:hover {
+    background: var(--gray-dark);
+    color: var(--white);
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+form input, form textarea {
+    background: var(--white);
+    padding: 0.5rem;
+    border: 1px solid var(--gray-dark);
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--black);
+}
+form button {
+    margin-top: 1rem;
+    padding: 0.7rem;
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+form button:hover {
+    background: var(--gray-dark);
+    color: var(--white);
+}
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: var(--black);
+    color: var(--white);
+    margin-top: 2rem;
+}
+.about-card {
+    background: var(--gray);
+    border-radius: 10px;
+    box-shadow: 0 2px 12px var(--gray-dark);
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+.about-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+.about-info {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--black);
+}
+.about-info li {
+    margin-bottom: 0.5rem;
+}
+.resume-label {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+}
+.resume-download {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: var(--black);
+    color: var(--white);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.resume-download:hover {
+    background: var(--gray-dark);
+    color: var(--white);
+}
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+.skills-row li {
+    background: var(--gray);
+    color: var(--black);
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 1px 4px var(--gray-dark);
+    list-style: none;
+    font-size: 1rem;
+}
+@media (max-width: 900px) {
+    main {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+    section {
+        padding: 1rem;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+@media (max-width: 700px) {
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+    main {
+        padding: 0 0.5rem;
+    }
+    section {
+        padding: 1rem;
+    }
+}
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    section h2 {
+        font-size: 1.2rem;
+    }
+    .project {
+        padding: 0.5rem;
+    }
+    form input, form textarea {
+        font-size: 0.9rem;
+    }
+    form button {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+}

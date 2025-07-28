@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - My Portfolio</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>My Portfolio</h1>
+    </header>
+    <main>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project">
+                    <h3>Hospital Management System <span style="font-weight:normal;">| May 2024</span></h3>
+                    <button class="project-btn" onclick="toggleDescription(this.parentElement); event.stopPropagation();">Show Description</button>
+                    <div class="project-desc" style="display:none;">
+                        <p>The software will help with registration of patients and manage appointments, records of patients.<br>
+                        Computerizes all details regarding patient and hospital information.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <h3>Login &amp; Register Page Web App</h3>
+                    <button class="project-btn" onclick="toggleDescription(this.parentElement); event.stopPropagation();">Show Description</button>
+                    <div class="project-desc" style="display:none;">
+                        <p>Built a simple and responsive login/register page using HTML, CSS, and JavaScript. Practiced UI development basics and used GitHub Copilot for code suggestions to enhance learning of prompt engineering and frontend development workflows.</p>
+                    </div>
+                </div>
+            </div>
+            <script>
+            function toggleDescription(projectElem) {
+                const desc = projectElem.querySelector('.project-desc');
+                if (desc.style.display === 'none' || desc.style.display === '') {
+                    desc.style.display = 'block';
+                } else {
+                    desc.style.display = 'none';
+                }
+            }
+            </script>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list skills-row">
+                <li>HTML &amp; CSS</li>
+                <li>JavaScript</li>
+                <li>AWS</li>
+                <li>DevOps</li>
+                <li>Git &amp; GitHub</li>
+                <li>Python</li>
+                <li>MySQL</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+</body>
+</html>
