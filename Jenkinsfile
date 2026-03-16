@@ -2,34 +2,33 @@ pipeline {
     agent any
 
     stages {
+
         stage('Clone Repository') {
             steps {
                 git branch: 'master', url: 'https://github.com/MrugeshKalal/my_protfoliosite.git'
             }
         }
 
-        stage('Build') {
+        stage('Build Docker Image') {
             steps {
-                echo "No build step required for static portfolio site."
-                // If it was a Node.js/React app, you would use: sh 'npm install && npm run build'
+                echo "Building Docker Image..."
+                sh 'docker build -t portfolio-site .'
             }
         }
 
-        stage('Test') {
+        stage('Stop Old Container') {
             steps {
-                echo "No tests available for static portfolio site."
-                // If you had tests, add them here (e.g., npm test or pytest)
+                echo "Stopping old container if running..."
+                sh 'docker rm -f portfolio-container || true'
             }
         }
 
-        stage('Deploy') {
+        stage('Run Docker Container') {
             steps {
-                echo "Deploying application to web server..."
-                sh '''
-                    # Ensure you have permissions to copy files
-                    cp -r * /var/www/html/
-                '''
+                echo "Starting new container..."
+                sh 'docker run -d -p 8081:80 --name portfolio-container portfolio-site'
             }
         }
+
     }
 }
